@@ -1,0 +1,207 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+@font-face {
+    font-family:starwars ;
+    src: url(/starwars/star-jedi-font/StarJedi-DGRW.woff);
+}
+
+@font-face {
+    font-family: starwarshollow;
+    src: url(/starwars/star-jedi-font/StarJediHollow-A4lL.woff);
+}
+
+html,body{
+
+overflow:hidden;
+width:100%;
+padding: 0;
+margin:0;
+
+
+}
+
+#container{
+    width:100%;
+    height:100%;
+    background-image: url("star-wars-backgrounds.jpg");
+}
+
+#title{
+position: fixed;
+top:-90%;
+left:-10%;
+opacity: 0;
+font-family:starwarshollow ;
+font-size: 840px;
+color:rgb(255, 208, 89);;
+animation: title_animate 25s;
+animation-delay: 2s;
+
+}
+
+@keyframes title_animate{
+
+0%{opacity: 0; left:-10%;top:-90%;font-size: 840px;}
+10%{opacity: 1;}
+100%{opacity: 0;top:50%;left:45%;font-size: 0%;}
+
+
+}
+
+
+#wrapper{
+
+position: absolute;
+width:97%;
+height:97%;
+perspective: 700px;
+
+
+
+}
+#txt_block{
+    position: absolute;
+    font-family: starwars;
+   bottom: -120%;
+    color:rgb(248, 193, 54);
+    text-align: center;
+    width:100%;
+    scale:5;
+    opacity: 1;
+    transform-style: preserve-3d;
+    transform:rotateY(0deg) rotateX(70deg);
+    animation: txt_animate 75s;
+    animation-timing-function: linear;
+    animation-delay: 10s;
+}
+
+@keyframes txt_animate {
+
+    from{opacity: 1;scale:5;transform: rotateY(0 deg) rotateX(70deg);bottom: -120%;}
+    to{opacity: 0;scale:0;transform: rotateY(0 deg) rotateX(140deg);bottom:100%;}
+    
+}
+
+
+
+#cover{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:200px;
+    z-index: 2;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.01));
+}
+
+#end_txt{
+
+position: absolute;
+top:0%;
+left:20%;
+font-family: starwarshollow;
+font-size: 100px;
+opacity: 0;
+color: rgb(255, 208, 89);
+animation: end_animate 15s ;
+animation-delay: 65s;
+
+
+}
+
+@keyframes end_animate {
+    0%{opacity: 0;top:0%;left:5%;font-size: 100px;}
+    10%{opacity: 1;}
+    100%{opacity: 0;top:0%;left:45%;font-size: 340px;}
+}
+
+
+</style>
+
+
+
+<head>
+
+<body>
+
+<div id="container">
+
+
+<audio autoplay>
+    <source src="star.mp3" type="audio/mp3">
+</audio>
+
+<div id="title">
+    <div>
+        star
+    </div>
+    <div style="line-height: 0%;">
+        Wars
+    </div>
+</div>
+
+
+<div id="wrapper">
+    <div id="txt_block">
+        xmrrabbitx Presenting ....
+        <br>
+        it is a period of civil war.
+        </br>
+        rebel spaceships, striking from 
+        </br>
+        a hidden base, have won their
+        </br>
+        first victory against the
+    </br>
+    evil galactic empire
+</br> </br>
+during the battle, rebbel spies
+</br>
+managed to steal secret plans
+</br>
+to the empire's ultimate weapon.
+</br>
+the death Star, an armored space
+</br>
+station with enough power
+</br>
+to destroy entire planet.
+</br>
+</br>
+pursued by the empires's sinister
+</br>
+agents, princess leia races home
+</br>
+board her starship, custodian of
+</br>
+the stolen plans that can save
+</br>
+her people and restore freedom
+</br>
+to the galaxy ...
+
+    </div>
+</div>
+
+
+</div>
+
+
+<div id="cover">
+
+</div>
+
+<div id="end_txt">
+    the end
+</div>
+
+
+
+
+</body>
+</html>
